@@ -1,14 +1,65 @@
-# Getting Started with Create React App
+# Algorithm Visualizer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An interactive web application that visualizes sorting algorithms in real-time. Built with React and TypeScript, this tool helps users understand how different sorting algorithms work by providing step-by-step visual representations of the sorting process.
+
+## Features
+
+- **Interactive Visualizations**: Watch sorting algorithms execute step-by-step with animated bar charts
+- **Multiple Algorithms**: Supports 6 popular sorting algorithms:
+  - Bubble Sort
+  - Selection Sort
+  - Insertion Sort
+  - Merge Sort
+  - Quick Sort
+  - Heap Sort
+- **Playback Controls**: Play, pause, step forward/backward, and reset functionality
+- **Customizable Settings**: Adjust animation speed, array size, and display options
+- **Algorithm Information**: Detailed descriptions, time complexity, and performance characteristics for each algorithm
+- **Real-time Status**: Visual indicators showing which elements are being compared, swapped, or sorted
+
+## How It Works
+
+The application generates random arrays of numbers and visualizes them as animated bar charts. Each algorithm implementation tracks every step of the sorting process, including:
+
+- **Comparing**: Elements being compared are highlighted
+- **Swapping**: Elements being swapped are animated
+- **Sorted**: Completed elements are marked as sorted
+- **Pivot/Partition**: Special indicators for divide-and-conquer algorithms
+
+The visualization shows the array state at each step, making it easy to understand how each algorithm progresses toward the final sorted result.
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (version 14 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd algorithm-visualizer
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) to view the application in your browser.
 
 ## Available Scripts
 
-In the project directory, you can run:
-
 ### `npm start`
 
-Runs the app in the development mode.\
+Runs the app in development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
@@ -16,7 +67,7 @@ You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
+Launches the test runner in interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
@@ -29,18 +80,33 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. **Select an Algorithm**: Choose from the dropdown menu to visualize different sorting algorithms
+2. **Generate New Array**: Click "Generate New Array" to create a new random dataset
+3. **Control Playback**: Use the play/pause button to start/stop the visualization
+4. **Step Through**: Use the forward/backward buttons to step through the algorithm manually
+5. **Adjust Settings**: Modify speed, array size, and other visualization settings
+6. **Learn**: Read the algorithm information panel to understand time complexity and how each algorithm works
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Technology Stack
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- **React 19**: Modern React with hooks for state management
+- **TypeScript**: Type-safe development
+- **Framer Motion**: Smooth animations and transitions
+- **CSS3**: Custom styling and responsive design
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Project Structure
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+src/
+├── components/          # React components
+│   ├── ArrayVisualizer.tsx    # Main visualization component
+│   ├── ControlPanel.tsx       # Playback controls
+│   └── AlgorithmInfo.tsx      # Algorithm information display
+├── algorithms/         # Algorithm implementations
+│   └── sortingAlgorithms.ts   # All sorting algorithm logic
+├── types/             # TypeScript type definitions
+│   └── algorithm.ts           # Algorithm-related types
+└── App.tsx           # Main application component
+```
