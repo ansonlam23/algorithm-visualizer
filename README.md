@@ -88,25 +88,3 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 4. **Step Through**: Use the forward/backward buttons to step through the algorithm manually
 5. **Adjust Settings**: Modify speed, array size, and other visualization settings
 6. **Learn**: Read the algorithm information panel to understand time complexity and how each algorithm works
-
-## Technology Stack
-
-- **React 19**: Modern React with hooks for state management
-- **TypeScript**: Type-safe development
-- **Framer Motion**: Smooth animations and transitions
-- **CSS3**: Custom styling and responsive design
-
-## Project Structure
-
-```
-src/
-├── components/          # React components
-│   ├── ArrayVisualizer.tsx    # Main visualization component
-│   ├── ControlPanel.tsx       # Playback controls
-│   └── AlgorithmInfo.tsx      # Algorithm information display
-├── algorithms/         # Algorithm implementations
-│   └── sortingAlgorithms.ts   # All sorting algorithm logic
-├── types/             # TypeScript type definitions
-│   └── algorithm.ts           # Algorithm-related types
-└── App.tsx           # Main application component
-```
